@@ -1,0 +1,840 @@
+.rainbowText {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+    .rainbowText[highlight="yes"] {
+        border: 5px solid #ffff99;
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%  !important;   
+    overflow: auto;    
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;        
+      padding: 10px;
+      border: 1px solid #888;
+      width: 75%;
+      font-family: "Trebuchet MS";
+      font-size: 20px;
+      position: relative;
+    }
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #00de3b;
+      color: black;
+    }
+    .modal-footer {
+      padding: 2px 16px;
+      background-color: #00de3b;
+      color: black;
+    }
+    
+
+h1 {
+  text-align: center;
+}
+
+#profession::after {
+    content: "→";
+}
+
+#choose-home-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "choose-home-header choose-home-header"
+                         "closeQ cozyQ"
+                         "upscaleHL suburbanO"
+                         "choose-home-footer choose-home-footer";
+}
+
+    #choose-home-header {
+        grid-area: choose-home-header;
+    }
+    #closeQ {
+        grid-area: closeQ;
+    }
+    #closcozyQeQ {
+        grid-area: closcozyQeQ;
+    }
+    #upscaleHL {
+        grid-area: upscaleHL;
+    }
+    #suburbanO {
+        grid-area: suburbanO;
+    }
+    #choose-home-footer {
+        grid-area: choose-home-footer;
+    }
+
+#transport-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "transport-header transport-header"
+                            "bus puttputt"
+                            "sedan zz"
+                            "transport-footer transport-footer";
+}
+
+    #transport-header {
+        grid-area: transport-header;
+    }
+    #bus {
+        grid-area: bus;
+    }
+    #puttputt {
+        grid-area: puttputt;
+    }
+    #sedan {
+        grid-area: sedan;
+    }
+    #zz {
+        grid-area: zz;
+    }
+    #transport-footer {
+        grid-area: transport-footer;
+    }
+
+
+#food-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "food-header food-header"
+                            "basic common"
+                            "royal none"
+                            "food-footer food-footer";
+}
+
+    #food-header {
+        grid-area: food-header;
+    }
+    #basic {
+        grid-area: basic;
+    }
+    #common {
+        grid-area: common;
+    }
+    #royal {
+        grid-area: royal;
+    }
+    #food-footer {
+        grid-area: food-footer;
+    }
+
+    
+#clothes-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "clothes-header clothes-header"
+                            "lounger trendsetter"
+                            "sophisticate guru"
+                            "clothes-footer clothes-footer";
+}
+
+    #clothes-header {
+        grid-area: clothes-header;
+    }
+    #lounger {
+        grid-area: lounger;
+    }
+    #trendsetter {
+        grid-area: trendsetter;
+    }
+    #sophisticate {
+        grid-area: sophisticate;
+    }
+    #guru {
+        grid-area: guru;
+    }
+    #clothes-footer {
+        grid-area: clothes-footer;
+    }
+
+#clothes-content img {
+    width: 100%;
+}
+
+#fun-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "fun-header"
+                            "stayathome" 
+                            "weekend"
+                            "spender"
+                            "fun-footer";
+}
+
+    #fun-header {
+        grid-area: fun-header;
+    }
+    #stayathome {
+        grid-area: stayathome;
+    }
+    #weekend {
+        grid-area: weekend;
+    }
+    #spender {
+        grid-area: spender;
+    }
+    #fun-footer {
+        grid-area: fun-footer;
+    }
+
+#fun-content img {
+    width: 75%;
+    margin: 0 auto;
+}    
+
+
+#comm-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "comm-header"
+                            "comm-form"
+                            "comm-footer";
+}
+
+    #comm-header {
+        grid-area: comm-header;
+    }
+    #comm-form {
+        grid-area: comm-form;
+    }
+    #comm-footer {
+        grid-area: comm-footer;
+    }
+
+    #comm-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "phone-wrapper internet-wrapper"
+                             "nettv-wrapper premium-wrapper"
+                             "commsubmit commsubmit";
+    }
+        #phone-wrapper {
+            grid-area: phone-wrapper;
+        }
+        #internet-wrapper {
+            grid-area: internet-wrapper;
+        }
+        #nettv-wrapper {
+            grid-area: nettv-wrapper;
+        }
+        #premium-wrapper {
+            grid-area: premium-wrapper;
+        }
+        #commsubmit {
+            grid-area: commsubmit;
+            width: 120px;
+        }
+
+#save-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "save-header save-header"
+                            "simple savvy"
+                            "super none"
+                            "save-footer save-footer";
+}
+
+    #save-header {
+        grid-area: save-header;
+    }
+    #simple {
+        grid-area: simple;
+    }
+    #savvy {
+        grid-area: savvy;
+    }
+    #super {
+        grid-area: super;
+    }
+    #save-footer {
+        grid-area: save-footer;
+    }
+
+#wheelOfFortune {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #wheel {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #spin {
+    font: 1.5rem/0 sans-serif;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin: -15%;
+    background: #fff;
+    color: #fff;
+    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: 0.8s;
+  }
+  
+  #spin::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+  }
+
+#budget-wrapper {
+    font-family: "Trebuchet MS";
+    font-size: 15px;
+}
+
+    .cell {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    .earncell {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    .expensecell {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+.center {
+    width: 100%;
+}
+    
+.column {
+    float: left;
+    width: 48%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+
+.commBox {
+    height: 15px;
+    width: 15px;
+}
+
+#formLink {
+    font-family: "Trebuchet MS";
+    font-size: 25px;        
+}
+
+/* Added for Responsive layout */
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.expensecell * {
+    color: rgb(214, 0, 0);
+}
+
+.earncell * {
+    color: rgb(5, 110, 5);
+}
+
+#totalGame {
+    display: grid;
+    grid-template-columns: 50% auto;
+    align-items: flex-start;
+}
+
+#board {
+    /*background-color: #52bcff;*/
+    display: grid;                            
+    grid-template-columns: repeat(6, auto);     
+    margin: 10px; 
+}
+
+.wide {
+    grid-row: 2 / 4;                         
+    grid-column: 2 / 6;    
+    background-color: #ffe645 !important;
+    font-family: "Trebuchet MS";
+    font-size: 25px;
+    overflow-wrap: break-word;
+    padding: 20px;             
+}
+.wide:hover {
+    cursor: default !important;
+}
+
+.square {
+    background-color: #52bcff;
+    border: 1px solid black;
+    padding: 5px;
+    word-wrap: break-word;
+    padding: 10px;
+    font-family: "Trebuchet MS";
+    font-size: 20px;
+    margin-top: -1px;
+    margin-left: -1px;
+    min-height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.square[highlight="yes"] {
+    border: 5px solid #ffff99;
+}
+
+.square a {
+    display: contents;
+}
+
+.square:hover {
+    cursor: pointer;
+    background-color: #00de3b;
+}
+
+.uEvent {
+    font-size: 60px;
+    text-align: center;
+    color: goldenrod;
+}
+
+#budget-scroll {
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+#budget-sheet {
+    background-color: beige;
+}
+
+.highlightedSquare {
+    border: 5px solid #ffff99 !important;
+}
+
+.game-desc-small-outer {
+    display: none;
+}
+
+/* StackOverflow style button */
+
+.button-so {
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin: 5px 5px 10px 0;
+}
+
+.button-so:hover,
+.button-so:focus {
+  background-color: #07c;
+}
+
+.button-so:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-so:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+.pauseButtonHidden {
+    display: none;
+}
+
+.audio-button {
+    font-size: 20px;
+}
+
+.material-symbols-outlined {
+    font-size: 36px !important;
+}
+
+.audio-button {
+    padding: 2px 12px !important;
+}
+
+.modal-footer-left {
+    display: inline-block;
+    width: 10%;
+    float: left;
+}
+ .modal-footer-right {
+    display: inline-block;
+    width: 90%;
+}
+
+.modal-footer-left-inner {
+    position: relative;
+top: 50%;
+transform: translateY(50%);
+}
+
+/* Mobile devices portrait */
+@media (max-width: 75em) { 
+
+    #totalGame {
+        grid-template-columns: 38% auto;
+    }
+    
+    #board {
+        grid-template-areas: "profession"
+                             "home"
+                             "transport"
+                             "unexpected1"
+                             "invest1"
+                             "wheel1"
+                             "communicationId"
+                             "save"
+                             "wheel2"
+                             "clothes"
+                             "fun"
+                             "finalInvest"
+                             "unexpected2"
+                             "wheel3"
+                             "food"
+                             "unexpected3"
+        
+        ;
+        margin: 5px;
+    }
+
+    #profession {
+        grid-area: profession;
+    }
+    #home {
+        grid-area: home;
+    }
+    #transport {
+        grid-area: transport;
+    }
+    #unexpected1 {
+        grid-area: unexpected1;
+    }
+    #invest1 {
+        grid-area: invest1;
+    }
+    #wheel1 {
+        grid-area: wheel1;
+    }
+    #communicationId {
+        grid-area: communicationId;
+    }
+    #save {
+        grid-area: save;
+    }
+    #wheel2 {
+        grid-area: wheel2;
+    }
+    #clothes {
+        grid-area: clothes;
+    }
+    #fun {
+        grid-area: fun;
+    }
+    #finalInvest {
+        grid-area: finalInvest;
+    }
+    #unexpected2 {
+        grid-area: unexpected2;
+    }
+    #wheel3 {
+        grid-area: wheel3;
+    }
+    #food {
+        grid-area: food;
+    }
+    #unexpected3 {
+        grid-area: unexpected3;
+    }
+    
+    #choose-home-content {
+        display: grid;
+        width: 94% !important;
+        grid-template-areas: "choose-home-header"
+                             "closeQ"
+                             "cozyQ"
+                             "upscaleHL"
+                             "suburbanO"
+                             "choose-home-footer";
+    }
+
+    #choose-home-content img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+    #transport-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "transport-header"
+                                "bus"
+                                "puttputt"
+                                "sedan"
+                                "zz"
+                                "transport-footer";
+    }
+
+    #food-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "food-header"
+                                "basic"
+                                "common"
+                                "royal"
+                                "food-footer";
+    }
+
+    #clothes-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "clothes-header"
+                                "lounger"
+                                "trendsetter"
+                                "sophisticate"
+                                "guru"
+                                "clothes-footer";
+    }
+
+    #fun-content {
+        display: grid;
+        width: 94%;
+    }
+        #fun-content img {
+            width: 100%;
+        }    
+
+    #save-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "save-header"
+                                "simple"
+                                "savvy"
+                                "super"
+                                "save-footer";
+    }
+
+    #comm-content {
+        display: grid;
+        width: 94%;
+    }
+    
+    #comm-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "phone-wrapper" 
+                             "internet-wrapper"
+                             "nettv-wrapper" 
+                             "premium-wrapper"
+                             "commsubmit";
+    }
+
+    /*#choose-home-content {
+        width: 95%;
+    }*/
+
+    .square {
+        min-height: 100px;
+        max-width: 105px;
+        margin-left: 0px;
+    }
+
+    .wide {
+        display: none;
+    }
+
+    #budget-scroll {
+        margin: 5px;
+        padding-left: 0px;
+    }
+
+    .game-desc-small {
+        display: block;
+        font-family: "Trebuchet MS";
+        font-size: 20px;
+        overflow-wrap: break-word;
+        padding: 10px;
+    }
+
+    .game-desc-small-outer {
+        background-color: #ffe645 !important;
+        border: 1px solid black;
+        padding: 6px;
+        display: block;
+    }
+
+    .cell,
+    .earncell,
+    .expensecell {
+        padding: 4px;
+        font-size: 12px;
+    }
+    .modal * {
+        font-size: 15px;
+    }
+
+    .hiddenSquare {
+        display: none;
+    }
+
+    .modal-content {
+        width: 94%;
+        margin-left: 2px;
+    }
+
+    .ui-dialog {
+        width: 94% !important;
+        top: 0 !important;
+        left: 0 !important;
+        position: fixed;
+    }
+
+    #profession::after {
+        content: "";
+    }
+
+    .modal-footer-left {
+        width: 20%;
+    }
+     .modal-footer-right {
+        width: 80%;
+    }
+}
+
+
+/* Mobile devices landscape */
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+
+    #choose-home-content {
+        display: grid;
+        width: 94% !important;
+        grid-template-areas: "choose-home-header choose-home-header"
+                             "closeQ cozyQ"
+                             "upscaleHL suburbanO"
+                             "choose-home-footer choose-home-footer";
+    }
+
+    #choose-home-content img {
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    #transport-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "transport-header transport-header"
+                                "bus puttputt"
+                                "sedan zz"
+                                "transport-footer transport-footer";
+    }
+
+    #comm-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "phone-wrapper internet-wrapper" 
+                             "nettv-wrapper premium-wrapper" 
+                             "commsubmit commsubmit";
+    }
+
+    #save-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "save-header save-header save-header"
+                                "simple savvy super"
+                                "save-footer save-footer save-footer";
+    }
+
+    #clothes-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "clothes-header clothes-header"
+                                "lounger trendsetter"
+                                "sophisticate guru"
+                                "clothes-footer clothes-footer";
+    }
+
+    #fun-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "fun-header fun-header fun-header"
+                                "stayathome weekend spender"
+                                "fun-footer fun-footer fun-footer";
+    }
+
+    #food-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "food-header food-header food-header"
+                                "basic common royal"
+                                "food-footer food-footer food-footer";
+    }
+
+    #profession::after {
+        content: "";
+    }
+}
+

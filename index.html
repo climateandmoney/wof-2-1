@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Play Worlde of Finance!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TRNJ8TR7C1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TRNJ8TR7C1');
+</script> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<style>
+.rainbowText {
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
+    .rainbowText[highlight="yes"] {
+        border: 5px solid #ffff99;
+    }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 0px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%  !important;   
+    overflow: auto;    
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;        
+      padding: 10px;
+      border: 1px solid #888;
+      width: 75%;
+      font-family: "Trebuchet MS";
+      font-size: 20px;
+      position: relative;
+    }
+    .modal-header {
+      padding: 2px 16px;
+      background-color: #00de3b;
+      color: black;
+    }
+    .modal-footer {
+      padding: 2px 16px;
+      background-color: #00de3b;
+      color: black;
+    }
+    
+
+h1 {
+  text-align: center;
+}
+
+#profession::after {
+    content: "→";
+}
+
+#choose-home-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "choose-home-header choose-home-header"
+                         "closeQ cozyQ"
+                         "upscaleHL suburbanO"
+                         "choose-home-footer choose-home-footer";
+}
+
+    #choose-home-header {
+        grid-area: choose-home-header;
+    }
+    #closeQ {
+        grid-area: closeQ;
+    }
+    #closcozyQeQ {
+        grid-area: closcozyQeQ;
+    }
+    #upscaleHL {
+        grid-area: upscaleHL;
+    }
+    #suburbanO {
+        grid-area: suburbanO;
+    }
+    #choose-home-footer {
+        grid-area: choose-home-footer;
+    }
+
+#transport-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "transport-header transport-header"
+                            "bus puttputt"
+                            "sedan zz"
+                            "transport-footer transport-footer";
+}
+
+    #transport-header {
+        grid-area: transport-header;
+    }
+    #bus {
+        grid-area: bus;
+    }
+    #puttputt {
+        grid-area: puttputt;
+    }
+    #sedan {
+        grid-area: sedan;
+    }
+    #zz {
+        grid-area: zz;
+    }
+    #transport-footer {
+        grid-area: transport-footer;
+    }
+
+
+#food-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "food-header food-header"
+                            "basic common"
+                            "royal none"
+                            "food-footer food-footer";
+}
+
+    #food-header {
+        grid-area: food-header;
+    }
+    #basic {
+        grid-area: basic;
+    }
+    #common {
+        grid-area: common;
+    }
+    #royal {
+        grid-area: royal;
+    }
+    #food-footer {
+        grid-area: food-footer;
+    }
+
+    
+#clothes-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "clothes-header clothes-header"
+                            "lounger trendsetter"
+                            "sophisticate guru"
+                            "clothes-footer clothes-footer";
+}
+
+    #clothes-header {
+        grid-area: clothes-header;
+    }
+    #lounger {
+        grid-area: lounger;
+    }
+    #trendsetter {
+        grid-area: trendsetter;
+    }
+    #sophisticate {
+        grid-area: sophisticate;
+    }
+    #guru {
+        grid-area: guru;
+    }
+    #clothes-footer {
+        grid-area: clothes-footer;
+    }
+
+#clothes-content img {
+    width: 100%;
+}
+
+#fun-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "fun-header"
+                            "stayathome" 
+                            "weekend"
+                            "spender"
+                            "fun-footer";
+}
+
+    #fun-header {
+        grid-area: fun-header;
+    }
+    #stayathome {
+        grid-area: stayathome;
+    }
+    #weekend {
+        grid-area: weekend;
+    }
+    #spender {
+        grid-area: spender;
+    }
+    #fun-footer {
+        grid-area: fun-footer;
+    }
+
+#fun-content img {
+    width: 75%;
+    margin: 0 auto;
+}    
+
+
+#comm-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "comm-header"
+                            "comm-form"
+                            "comm-footer";
+}
+
+    #comm-header {
+        grid-area: comm-header;
+    }
+    #comm-form {
+        grid-area: comm-form;
+    }
+    #comm-footer {
+        grid-area: comm-footer;
+    }
+
+    #comm-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "phone-wrapper internet-wrapper"
+                             "nettv-wrapper premium-wrapper"
+                             "commsubmit commsubmit";
+    }
+        #phone-wrapper {
+            grid-area: phone-wrapper;
+        }
+        #internet-wrapper {
+            grid-area: internet-wrapper;
+        }
+        #nettv-wrapper {
+            grid-area: nettv-wrapper;
+        }
+        #premium-wrapper {
+            grid-area: premium-wrapper;
+        }
+        #commsubmit {
+            grid-area: commsubmit;
+            width: 120px;
+        }
+
+#save-content {
+    display: grid;
+    width: 50%;
+    grid-gap: 10px;
+    grid-template-areas: "save-header save-header"
+                            "simple savvy"
+                            "super none"
+                            "save-footer save-footer";
+}
+
+    #save-header {
+        grid-area: save-header;
+    }
+    #simple {
+        grid-area: simple;
+    }
+    #savvy {
+        grid-area: savvy;
+    }
+    #super {
+        grid-area: super;
+    }
+    #save-footer {
+        grid-area: save-footer;
+    }
+
+#wheelOfFortune {
+    display: inline-flex;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #wheel {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  #spin {
+    font: 1.5rem/0 sans-serif;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    height: 30%;
+    margin: -15%;
+    background: #fff;
+    color: #fff;
+    box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    transition: 0.8s;
+  }
+  
+  #spin::after {
+    content: "";
+    position: absolute;
+    top: -17px;
+    border: 10px solid transparent;
+    border-bottom-color: currentColor;
+    border-top: none;
+  }
+
+#budget-wrapper {
+    font-family: "Trebuchet MS";
+    font-size: 15px;
+}
+
+    .cell {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    .earncell {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+    .expensecell {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+
+.center {
+    width: 100%;
+}
+    
+.column {
+    float: left;
+    width: 48%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+
+.commBox {
+    height: 15px;
+    width: 15px;
+}
+
+#formLink {
+    font-family: "Trebuchet MS";
+    font-size: 25px;        
+}
+
+/* Added for Responsive layout */
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.expensecell * {
+    color: rgb(214, 0, 0);
+}
+
+.earncell * {
+    color: rgb(5, 110, 5);
+}
+
+#totalGame {
+    display: grid;
+    grid-template-columns: 50% auto;
+    align-items: flex-start;
+}
+
+#board {
+    /*background-color: #52bcff;*/
+    display: grid;                            
+    grid-template-columns: repeat(6, auto);     
+    margin: 10px; 
+}
+
+.wide {
+    grid-row: 2 / 4;                         
+    grid-column: 2 / 6;    
+    background-color: #ffe645 !important;
+    font-family: "Trebuchet MS";
+    font-size: 25px;
+    overflow-wrap: break-word;
+    padding: 20px;             
+}
+.wide:hover {
+    cursor: default !important;
+}
+
+.square {
+    background-color: #52bcff;
+    border: 1px solid black;
+    padding: 5px;
+    word-wrap: break-word;
+    padding: 10px;
+    font-family: "Trebuchet MS";
+    font-size: 20px;
+    margin-top: -1px;
+    margin-left: -1px;
+    min-height: 100px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.square[highlight="yes"] {
+    border: 5px solid #ffff99;
+}
+
+.square a {
+    display: contents;
+}
+
+.square:hover {
+    cursor: pointer;
+    background-color: #00de3b;
+}
+
+.uEvent {
+    font-size: 60px;
+    text-align: center;
+    color: goldenrod;
+}
+
+#budget-scroll {
+    margin: 0 auto;
+    padding-left: 20px;
+}
+
+#budget-sheet {
+    background-color: beige;
+}
+
+.highlightedSquare {
+    border: 5px solid #ffff99 !important;
+}
+
+.game-desc-small-outer {
+    display: none;
+}
+
+/* StackOverflow style button */
+
+.button-so {
+    background-color: #0095ff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .8em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin: 5px 5px 10px 0;
+}
+
+.button-so:hover,
+.button-so:focus {
+  background-color: #07c;
+}
+
+.button-so:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-so:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+
+.pauseButtonHidden {
+    display: none;
+}
+
+.audio-button {
+    font-size: 20px;
+}
+
+.material-symbols-outlined {
+    font-size: 36px !important;
+}
+
+.audio-button {
+    padding: 2px 12px !important;
+}
+
+.modal-footer-left {
+    display: inline-block;
+    width: 10%;
+    float: left;
+}
+ .modal-footer-right {
+    display: inline-block;
+    width: 90%;
+}
+
+.modal-footer-left-inner {
+    position: relative;
+top: 50%;
+transform: translateY(50%);
+}
+
+/* Mobile devices portrait */
+@media (max-width: 75em) { 
+
+    #totalGame {
+        grid-template-columns: 38% auto;
+    }
+    
+    #board {
+        grid-template-areas: "profession"
+                             "home"
+                             "transport"
+                             "unexpected1"
+                             "invest1"
+                             "wheel1"
+                             "communicationId"
+                             "save"
+                             "wheel2"
+                             "clothes"
+                             "fun"
+                             "finalInvest"
+                             "unexpected2"
+                             "wheel3"
+                             "food"
+                             "unexpected3"
+        
+        ;
+        margin: 5px;
+    }
+
+    #profession {
+        grid-area: profession;
+    }
+    #home {
+        grid-area: home;
+    }
+    #transport {
+        grid-area: transport;
+    }
+    #unexpected1 {
+        grid-area: unexpected1;
+    }
+    #invest1 {
+        grid-area: invest1;
+    }
+    #wheel1 {
+        grid-area: wheel1;
+    }
+    #communicationId {
+        grid-area: communicationId;
+    }
+    #save {
+        grid-area: save;
+    }
+    #wheel2 {
+        grid-area: wheel2;
+    }
+    #clothes {
+        grid-area: clothes;
+    }
+    #fun {
+        grid-area: fun;
+    }
+    #finalInvest {
+        grid-area: finalInvest;
+    }
+    #unexpected2 {
+        grid-area: unexpected2;
+    }
+    #wheel3 {
+        grid-area: wheel3;
+    }
+    #food {
+        grid-area: food;
+    }
+    #unexpected3 {
+        grid-area: unexpected3;
+    }
+    
+    #choose-home-content {
+        display: grid;
+        width: 94% !important;
+        grid-template-areas: "choose-home-header"
+                             "closeQ"
+                             "cozyQ"
+                             "upscaleHL"
+                             "suburbanO"
+                             "choose-home-footer";
+    }
+
+    #choose-home-content img {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+    #transport-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "transport-header"
+                                "bus"
+                                "puttputt"
+                                "sedan"
+                                "zz"
+                                "transport-footer";
+    }
+
+    #food-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "food-header"
+                                "basic"
+                                "common"
+                                "royal"
+                                "food-footer";
+    }
+
+    #clothes-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "clothes-header"
+                                "lounger"
+                                "trendsetter"
+                                "sophisticate"
+                                "guru"
+                                "clothes-footer";
+    }
+
+    #fun-content {
+        display: grid;
+        width: 94%;
+    }
+        #fun-content img {
+            width: 100%;
+        }    
+
+    #save-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "save-header"
+                                "simple"
+                                "savvy"
+                                "super"
+                                "save-footer";
+    }
+
+    #comm-content {
+        display: grid;
+        width: 94%;
+    }
+    
+    #comm-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "phone-wrapper" 
+                             "internet-wrapper"
+                             "nettv-wrapper" 
+                             "premium-wrapper"
+                             "commsubmit";
+    }
+
+    /*#choose-home-content {
+        width: 95%;
+    }*/
+
+    .square {
+        min-height: 100px;
+        max-width: 105px;
+        margin-left: 0px;
+    }
+
+    .wide {
+        display: none;
+    }
+
+    #budget-scroll {
+        margin: 5px;
+        padding-left: 0px;
+    }
+
+    .game-desc-small {
+        display: block;
+        font-family: "Trebuchet MS";
+        font-size: 20px;
+        overflow-wrap: break-word;
+        padding: 10px;
+    }
+
+    .game-desc-small-outer {
+        background-color: #ffe645 !important;
+        border: 1px solid black;
+        padding: 6px;
+        display: block;
+    }
+
+    .cell,
+    .earncell,
+    .expensecell {
+        padding: 4px;
+        font-size: 12px;
+    }
+    .modal * {
+        font-size: 15px;
+    }
+
+    .hiddenSquare {
+        display: none;
+    }
+
+    .modal-content {
+        width: 94%;
+        margin-left: 2px;
+    }
+
+    .ui-dialog {
+        width: 94% !important;
+        top: 0 !important;
+        left: 0 !important;
+        position: fixed;
+    }
+
+    #profession::after {
+        content: "";
+    }
+
+    .modal-footer-left {
+        width: 20%;
+    }
+     .modal-footer-right {
+        width: 80%;
+    }
+}
+
+
+/* Mobile devices landscape */
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+
+    #choose-home-content {
+        display: grid;
+        width: 94% !important;
+        grid-template-areas: "choose-home-header choose-home-header"
+                             "closeQ cozyQ"
+                             "upscaleHL suburbanO"
+                             "choose-home-footer choose-home-footer";
+    }
+
+    #choose-home-content img {
+        width: 60%;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    #transport-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "transport-header transport-header"
+                                "bus puttputt"
+                                "sedan zz"
+                                "transport-footer transport-footer";
+    }
+
+    #comm-form {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-areas: "phone-wrapper internet-wrapper" 
+                             "nettv-wrapper premium-wrapper" 
+                             "commsubmit commsubmit";
+    }
+
+    #save-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "save-header save-header save-header"
+                                "simple savvy super"
+                                "save-footer save-footer save-footer";
+    }
+
+    #clothes-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "clothes-header clothes-header"
+                                "lounger trendsetter"
+                                "sophisticate guru"
+                                "clothes-footer clothes-footer";
+    }
+
+    #fun-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "fun-header fun-header fun-header"
+                                "stayathome weekend spender"
+                                "fun-footer fun-footer fun-footer";
+    }
+
+    #food-content {
+        display: grid;
+        width: 94%;
+        grid-template-areas: "food-header food-header food-header"
+                                "basic common royal"
+                                "food-footer food-footer food-footer";
+    }
+
+    #profession::after {
+        content: "";
+    }
+}
+
+</style>    
+
+</head>
+<body> 
+    <div class="game-desc-small-outer">
+        <div class="modal-footer-left">
+            <div class="modal-footer-left-inner">
+                <audio id="main-page-audio-small" src="audio/main-page-audio.m4a"></audio>  
+                <button id="main-page-audio-small-play" class="button-so audio-button" onclick="controlAudio('main-page-audio-small', 'main-page-audio-small-play', 'main-page-audio-small-pause', 'play');">
+                    <span class="material-symbols-outlined">play_circle</span>
+                </button> 
+                <button id="main-page-audio-small-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('main-page-audio-small', 'main-page-audio-small-pause', 'main-page-audio-small-play', 'pause');">
+                    <span class="material-symbols-outlined">pause_circle</span>
+                </button>
+            </div>
+        </div>
+        <div class="modal-footer-right">
+            <div class="game-desc-small game-desc">
+                <span id="center-tile-small">
+                    <span id="game-desc-text" class="game-desc-text">Welcome to Worlde of Finance, a game that will teach you how to budget and save monthly! Before playing, make sure you have a coin for the unexpected events. To begin playing, click on the highlighted square. On the page that pops up, click the option that you decide to choose. Have fun!</span>
+                </span>
+            </div>
+        </div>
+    </div>
+<div id="totalGame">
+    
+    <div id="board">     
+        <div class="square" id="profession" onclick="popup(this, '#professionSelect');" highlight="yes" location-id="1" amount="0">Start! Choose a Profession!</div>
+        <div class="square" id="home" onclick="popup(this, '#homeSelect');" highlight="no" location-id="2">Choose a Home!</div>
+        <div class="square" id="transport" onclick="popup(this, '#transportSelect');" highlight="no" location-id="3">Car Dealership!</div>
+        <div class="square uEvent" id="unexpected1" uEvent="yes" onclick="unexpectedEvent(this, '#unexpectedSelect1');" highlight="no" location-id="4">$</div>
+        <div class="square" id="invest1" onclick="popup(this, '#invest');" highlight="no" location-id="5">Invest in a Retirement Fund!</div>
+        <div class="square" id="wheel1" onclick="popup(this, '#wheelOfFortune'); setWheelTile(this);" highlight="no" location-id="6"><span class="rainbowText"><strong>WHEEL OF FORTUNE!!!</strong></span></div>
+    
+        <div class="square uEvent" id="unexpected3" uEvent="yes" onclick="unexpectedEvent(this, '#unexpectedSelect3')" location-id="16" highlight="no">$</div>
+        <div class="square wide game-desc">
+            <span id="center-tile">
+                <audio id="main-page-audio" src="audio/main-page-audio.m4a"></audio>  
+                <button id="main-page-audio-play" class="button-so audio-button" onclick="controlAudio('main-page-audio', 'main-page-audio-play', 'main-page-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                <button id="main-page-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('main-page-audio', 'main-page-audio-pause', 'main-page-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button> 
+                <br /> 
+                <span id="game-desc-text" class="game-desc-text">Welcome to Worlde of Finance, a game that will teach you how to budget and save monthly! Before playing, make sure you have a coin for the unexpected events. To begin playing, click on the highlighted square. On the page that pops up, click the option that you decide to choose. Have fun!</span>
+            </span>
+        </div>
+        <div class="square" id="communicationId" onclick="popup(this, '#commSelect')" highlight="no" location-id="7">How Will You Keep in Touch?</div>
+    
+        <div class="square" id="food" onclick="popup(this, '#foodSelect')" highlight="no" location-id="15">Grocery Store!</div>
+        <div class="square" id="save" onclick="popup(this, '#saveSelect')" highlight="no" location-id="8">Open a Savings Account!</div>
+    
+        <div class="square" id="wheel3" location-id="14" onclick="popup(this, '#wheelOfFortune'); setWheelTile(this);" highlight="no"><span class="rainbowText"><strong>WHEEL OF FORTUNE!!!</strong><span></div>
+        <div class="square uEvent" id="unexpected2" uEvent="yes" onclick="unexpectedEvent(this, '#unexpectedSelect2')" location-id="13" highlight="no">$</div>
+        <div class="square" id="finalInvest" onclick="popup(this, '#invest2')" highlight="no" location-id="12">Invest in a Retirement Fund!</div>
+        <div class="square" id="fun" onclick="popup(this, '#funSelect')" highlight="no" location-id="11">How Will You Have Fun?</div>
+        <div class="square" id="clothes" onclick="popup(this, '#clothesSelect');" highlight="no" location-id="10">Clothing Shop!</div>
+        <div class="square" id="wheel2" location-id="9" onclick="popup(this, '#wheelOfFortune'); setWheelTile(this);" highlight="no"><span class="rainbowText"><strong>WHEEL OF FORTUNE!!!</strong><span></div>
+    </div>
+
+    <!--<div id="budget-wrapper"> -->
+        <div id="budget-scroll">
+            <table id="budget-sheet">
+                <thead>
+                    <tr>
+                        <th class="cell">Category</th>
+                        <th class="cell">Income</th>
+                        <th class="cell">Expense</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cell">Profession</td>
+                        <td class="earncell"><div id="professionSelect-cell"></div></td>
+                        <td class="cell">$0</td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Home</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="homeSelect-cell"></div></td>
+                    </tr>
+
+                    <tr>
+                        <td class="cell">Transportation</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="transportSelect-cell"></div></td>
+                    </tr>
+
+                    <tr>
+                        <td class="cell">Event</td>
+                        <td class="earncell"><div id="unexpectedSelect1Cell"></div></td>
+                        <td class="expensecell"><div id="unexpectedSelect1-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Invest</td>
+                        <td class="earncell"><div id="invest1Cell"></div></td>
+                        <td class="expensecell" div id="invest1-cell"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Wheel</td>
+                        <td class="earncell"><div id="wheelOfFortune1PLUScell"></div></td>
+                        <td class="expensecell"><div id="wheelOfFortune1-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Communication</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="commSelect-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Savings</td>
+                        <td class="earncell"><div id="saveSelectCell"></div></td>
+                        <td class="expensecell"><div id="saveSelect-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Wheel</td>
+                        <td class="earncell"><div id="wheelOfFortune2PLUScell"></div></td>
+                        <td class="expensecell"><div id="wheelOfFortune2-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Clothing</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="clothesSelect-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Fun</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="funSelect-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Invest</td>
+                        <td class="earncell"><div id="invest2Cell"></div></td>
+                        <td class="expensecell"><div id="invest2-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Event</td>
+                        <td class="earncell"><div id="unexpectedSelect2Cell"></div></td>
+                        <td class="expensecell"><div id="unexpectedSelect2-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Wheel</td>
+                        <td class="earncell"><div id="wheelOfFortune3PLUScell"></div></td>
+                        <td class="expensecell"><div id="wheelOfFortune3-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Food</td>
+                        <td class="cell">$0</td>
+                        <td class="expensecell"><div id="foodSelect-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="cell">Event</td>
+                        <td class="earncell"><div id="unexpectedSelect3Cell"></div></td>
+                        <td class="expensecell"><div id="unexpectedSelect3-cell"></div></td>
+                    </tr>
+                    <tr>
+                        <th class="cell" rowspan="2">Total</th>
+                        <td class="cell" id="incomeTotal"></td>
+                        <td class="cell" id="expenseTotal"></td>
+                    </tr>
+                    <tr>
+                        <td class="cell" colspan="2"><div id="totalCell"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+    <!--</div> -->
+</div>
+
+    <div id="modals">
+        <div class="modal" id="professionSelect">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Choose a Profession!</h1>
+                </div>
+                <br>
+                <form class="choice">
+                    <input type="radio" id="librarian" name="profession" value="lib" onchange = "decide('#professionSelect', 'Librarian', 4850, true, '#profession');">
+                        <label for="librarian">Librarian: $4,850/month</label><br>
+                    <input type="radio" id="mechanic" name="profession" value="mech" onchange = "decide('#professionSelect', 'Motorcycle Mechanic', 2800, true, '#profession')">
+                        <label for="mechanic">Motorcycle Mechanic: $2,800/month</label><br>
+                    <input type="radio" id="writer" name="profession" value="write"  onchange = "decide('#professionSelect', 'Writer', 4500, true, '#profession')">
+                        <label for="actor">Writer: $4,800/month</label><br>
+                    <input type="radio" id="teacher" name="profession" value="tea" onchange = "decide('#professionSelect', 'Teacher', 4500, true, '#profession')">
+                        <label for="teacher">Teacher: $4,500/month</label><br>
+                    <input type="radio" id="doctor" name="profession" value="doc"  onchange = "decide('#professionSelect', 'Doctor', 13000, true, '#profession')">
+                        <label for="doctor">Doctor: $13,000/month</label><br>
+                    <input type="radio" id="fire" name="profession" value="fi" onchange = "decide('#professionSelect', 'Firefighter', 3700, true, '#profession')">
+                        <label for="fire">Firefighter: $3,700/month</label><br>
+                    <input type="radio" id="engineer" name="profession" value="engi" onchange = "decide('#professionSelect', 'Computer Engineer', 9400, true, '#profession')">
+                        <label for="engineer">Computer Engineer: $9,400/month</label><br>
+                    <input type="radio" id="chef" name="profession" value="chef" onchange="decide('#professionSelect', 'Chef', 3300, true, '#profession')">
+                        <label for="chef">Chef: $3,300/month</label><br>
+                    <input type="radio" id="vet" name="profession" value="vete" onchange="decide('#professionSelect', 'Veterinarian', 5400, true, '#profession')">
+                        <label for="vet">Veterinarian: $5,400/month</label><br>
+                    <input type="radio" id="dev" name="profession" value="webdev" onchange="decide('#professionSelect', 'Web Developer', 5000, true, '#profession')">
+                        <label for="dev">Web Developer: $5,000/month</label><br>
+                </form>
+                            
+                <div class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="profession-audio" src="audio/profession-audio.m4a"></audio>
+                            <button id="profession-audio-play" class="button-so audio-button" onclick="controlAudio('profession-audio', 'profession-audio-play', 'profession-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="profession-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('profession-audio', 'profession-audio-pause', 'profession-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer-right">
+                        <h3>You can see here that there are 10 different professions with very different salaries. However, you shouldn't choose a job only because of the salaries. These are only estimates and all of the listed jobs are really awesome! With that being said, what do you want to be?</h3>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal" id="homeSelect">
+            <div id="choose-home-content" class="modal-content">
+                <div id="choose-home-header" class="modal-header">
+                    <h1>Choose a Home!</h1>
+                </div>
+                
+                <img id="closeQ" class="center" src="https://climateismoney.files.wordpress.com/2021/07/closequarters-e1627391680721.png" alt="Close Quarters: $800/month" onclick = "decide('#homeSelect', 'Close Quarters', 800, false, '#home')">
+                <img id="cozyQ" class="center" src="https://climateismoney.files.wordpress.com/2021/07/cozy_quaintness.png" alt="Cozy Quaintness: $1,200/month" onclick = "decide('#homeSelect', 'Cozy Quaintness', 1200, false, '#home')">
+                <img id="upscaleHL" class="center" src="https://climateismoney.files.wordpress.com/2021/07/upscale_high_life.png" alt="Upscale High Life: $1,800/month" onclick = "decide('#homeSelect', 'Upscale High Life', 1800, false, '#home')"> 
+                <img id="suburbanO" class="center" src="https://climateismoney.files.wordpress.com/2021/07/suburban_oasis.png" alt="Suburban Oasis: $2,400/month" onclick = "decide('#homeSelect', 'Suburban Oasis', 2400, false, '#home')">
+                
+                <div id="choose-home-footer" class = "modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="home-audio" src="audio/home-audio.m4a"></audio>
+                            <button id="home-audio-play" class="button-so audio-button" onclick="controlAudio('home-audio', 'home-audio-play', 'home-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="home-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('home-audio', 'home-audio-pause', 'home-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer-right">
+                        <h3>Now, we are going to find a home! In close quarters, you will rent a small apartment. This means that any necessary repairs are the responsibilities of the landlord. However, this also means that you can’t own your home. In the other options, you are responsible for damage to your home. After a few years, you will own the house! Close Quarters and Cozy Quaintness are much smaller than the other options. If you have a big family, you'll probably want to choose a bigger home.</h3> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="modal" id="transportSelect">
+            <div id="transport-content" class="modal-content">
+                <div id="transport-header" class="modal-header">
+                    <h1>How Will You Get Around?</h1>
+                </div>
+                
+                <img id="bus" class="center" src="https://climateismoney.files.wordpress.com/2021/07/stopandgo.png" alt="Stop and Go: $200/month" onclick = "decide('#transportSelect', 'Stop and Go', 200, false, '#transport')">
+                <img id="puttputt" class="center" src="https://climateismoney.files.wordpress.com/2021/07/puttputt.png" alt="Putt-Putt: $450/month" onclick="decide('#transportSelect', 'Putt-Putt', 450, false, '#transport')">
+                <img id="sedan" class="center" src="https://climateismoney.files.wordpress.com/2021/07/slowandsteady.png" alt="Slow and Steady: $700/month" onclick="decide('#transportSelect', 'Slow and Steady', 700, false, '#transport')">
+                <img id="zz" class="center" src="https://climateismoney.files.wordpress.com/2021/07/zoomzoom.png" alt="Zoom-Zoom: $1,200/month" onclick="decide('#transportSelect', 'Zoom-Zoom', 1200, false, '#transport')">
+                
+                <div id="transport-footer" class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="cars-audio" src="audio/cars-audio.m4a"></audio>
+                            <button id="cars-audio-play" class="button-so audio-button" onclick="controlAudio('cars-audio', 'cars-audio-play', 'cars-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="cars-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('cars-audio', 'cars-audio-pause', 'cars-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>Will you use a car or ride the bus? The Stop and Go is much cheaper but you will have a more cramped space and, of course, you can’t choose the bus routes. If you decide to buy a car, you need to pay the monthly payment and buy gas for the car. The Putt-Putt (costs a total of $450/month) is a little cramped. However, the Slow and Steady (total cost of $700/month) has much more space so your friends and family can ride with you. Zoom-Zoom (total cost of $1,200) is more flashy and means you can show off but costs more in fuel.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="modal" id="unexpectedSelect1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Unexpected Event!</h1>
+                </div>
+                <p id="unexpectedText"></p>
+                <button type="button" class="button-so" id="heads">I got heads!</button>
+                <button type="button" class="button-so" id="tails">I got tails!</button>
+                <br />
+                <div class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="unexpected-event-audio" src="audio/unexpected-event-audio.m4a"></audio>
+                            <button id="unexpected-event-audio-play" class="button-so audio-button" onclick="controlAudio('unexpected-event-audio', 'unexpected-event-audio-play', 'unexpected-event-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="unexpected-event-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('unexpected-event-audio', 'unexpected-event-audio-pause', 'unexpected-event-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>Stuff happens in life. Maybe your car breaks down, or you lose your phone. Read the situation above to see what you will encounter!</h3>
+                    </div >
+                </div>
+            </div>
+        </div>
+            
+        <div class="modal" id="invest">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Invest in a Retirement Fund!</h1>
+                </div>
+                <p>Invest up to $1500 in the entire game. At the end of the game, you receive 1.2 times the investment’s value. Enter the amount you want to invest in the box below. When you are sure of the amount you want to invest, click "Submit".</p>
+                <br>
+                <label for="amount">Enter your amount here:</label>
+                <input type="number" id="investAmount" min="0" max="1500"><br>
+                <button id="submitAmount" class="button-so" type="button" onclick="invest('#invest1');">Submit</button><br>
+                
+                <div class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="invest-audio" src="audio/invest-audio.m4a"></audio>
+                            <button id="invest-audio-play" class="button-so audio-button" onclick="controlAudio('invest-audio', 'invest-audio-play', 'invest-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="invest-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('invest-audio', 'invest-audio-pause', 'invest-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                       <h3>One day, you will decide to stop working and just have fun. To do this, you need to save up plenty of money while you are working. In a month, you are only allowed to invest $1500 in your fund. You will gain 20% interest on the amount that you invest. This means that if you invested $1,000, you will earn back $1,200 at the end of the game. </h3>
+                    </div>
+                </div>
+            </div>    
+        </div>
+            
+        <div class="modal" id="invest2">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Invest in a Retirement Fund!</h1>
+                </div>
+                <p>Invest up to $1500 in the entire game. At the end of the game, you receive 1.2 times the investment’s value. Enter the amount you want to invest in the box below. When you are sure of the amount you want to invest, click "Submit".</p>
+                <p id="previous-amount"></p>
+                <br>
+                <label for="amount">Enter your amount here:</label>
+                <input type="number" id="investAmount2" min="0" max="1500"><br>
+                <button id="submitInvest" class="button-so" type="button" onclick="investTwo('#finalInvest');">Submit</button><br>
+                
+                <div class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="invest-2-audio" src="audio/invest-2-audio.m4a"></audio>
+                            <button id="invest-2-audio-play" class="button-so audio-button" onclick="controlAudio('invest-2-audio', 'invest-2-audio-play', 'invest-2-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="invest-2-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('invest-2-audio', 'invest-2-audio-pause', 'invest-2-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>In case you want to put extra money in your fund, you can invest right now! Remember, that you can only invest $1,500 in the <strong>entire</strong> game. This means that if, for example, you invested $900 last time, you can only invest $600 more.</h3>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div class="modal" id="wheelOfFortune">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1>Wheel of Fortune!!!</h1>
+                </div>
+                <div id="wheelOfFortune">
+                    <canvas id="wheel" width="300" height="300"></canvas>
+                    <div id="spin">SPIN</div>
+                </div>
+                <div class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="wheel-audio" src="audio/wheel-audio.m4a"></audio>
+                            <button id="wheel-audio-play" class="button-so audio-button" onclick="controlAudio('wheel-audio', 'wheel-audio-play', 'wheel-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="wheel-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('wheel-audio', 'wheel-audio-pause', 'wheel-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>For a little bit of added fun, we're going to do the Wheel of Fortune, which is similar to the lottery! Remember though, you should never rely on the lottery to keep you afloat. You have a very very small chance of winning and it can lead to bad financial decisions.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="modal" id="foodSelect">
+            <div id="food-content" class="modal-content">
+                <div id="food-header" class="modal-header">
+                    <h1>What Will You Eat?</h1>
+                </div>
+                    
+                <img id="basic" src="https://climateismoney.files.wordpress.com/2021/07/basicbasket.png" class="center" alt="Basic Basket: $400/month" onclick="decide('#foodSelect', 'Basic Basket', 400, false, '#food');">
+                <img id="common" src="https://climateismoney.files.wordpress.com/2021/07/common_cuisine.png" class="center" alt="Common Cuisine: $600/month" onclick="decide('#foodSelect', 'Common Cuisine', 600, false, '#food');">
+                <img id="royal" src="https://climateismoney.files.wordpress.com/2021/07/royal_feast.png" class="center" alt="Royal Feast: $1,000/month"  onclick="decide('#foodSelect', 'Royal Feast', 1000, false, '#food');">
+                    
+                <div id="food-footer" class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="food-audio" src="audio/food-audio.m4a"></audio>
+                            <button id="food-audio-play" class="button-so audio-button" onclick="controlAudio('food-audio', 'food-audio-play', 'food-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="food-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('food-audio', 'food-audio-pause', 'food-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>Time to eat! Food is definitely an important thing to add to your budget. We will now decide what you will eat. The Basic Basket just includes the necessary parts of your diet. This is cheaper than the other choices but doesn't include things like ice cream and soda. The Common Cuisine gives you slightly more than this. Occasionally, you can splurge on meals from your favorite restaurant as well as more luxurious deserts! Finally, the Royal Feast is the most expensive of them all. From things like chocolate sundaes and gourmet icecream, to daily restuarant meals, you can pretty much have everything! Once you have made a decision, click on the option that you want.</h3>
+                    </div>
+                </div>
+            </div>    
+        </div>
+            
+        <div class="modal" id="clothesSelect">
+            <div id="clothes-content" class="modal-content">
+                <div id="clothes-header" class="modal-header">
+                    <h1>What to Wear?</h1>
+                </div>
+                
+                <img id="lounger" src="https://climateismoney.files.wordpress.com/2021/07/lounger.png" alt="The Lounger: $60/month" onclick="decide('#clothesSelect', 'The Lounger', 60, false, '#clothes')">
+                <img id="trendsetter" src="https://climateismoney.files.wordpress.com/2021/07/trendsetter.png" alt="The Trendsetter: $120/month" onclick="decide('#clothesSelect', 'The Trendsetter', 120, false, '#clothes')">
+                <img id="sophisticate" src="https://climateismoney.files.wordpress.com/2021/07/sophisticate.png" alt="The Sophisticate: $250/month" onclick="decide('#clothesSelect', 'The Sophisticate', 250, false, '#clothes')">
+                <img id="guru" src="https://climateismoney.files.wordpress.com/2021/07/glamour.png" alt="The Glamour Guru: $500/month" onclick="decide('#clothesSelect', 'The Glamour Guru', 500, false, '#clothes')">
+                
+                <div id="clothes-footer" class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="clothing-audio" src="audio/clothing-audio.m4a"></audio>
+                            <button id="clothing-audio-play" class="button-so audio-button" onclick="controlAudio('clothing-audio', 'clothing-audio-play', 'clothing-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="clothing-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('clothing-audio', 'clothing-audio-pause', 'clothing-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>We often don’t think of small expenses like clothing when we budget. While clothing can be fun, make sure you don’t get carried away with the expenses! If you are in a job that requires working in the office, you will probably want to invest in nicer clothing. However, if you have a job that requires working with your hands and potentially getting dirty, you might not want to spend a lot for clothing! What will you wear? Click the option which you want to choose.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="modal" id="funSelect">
+            <div id="fun-content" class="modal-content">
+                <div id="fun-header" class="modal-header">
+                    <h1>What Will You Do For Fun?</h1>
+                </div>
+                    
+                <img id="stayathome" src="https://climateismoney.files.wordpress.com/2021/07/stayathome.png" alt="The Stay at Home: $100/month" onclick="decide('#funSelect', 'The Stay at Home', 100, false, '#fun');">
+                <img id="weekend" class="center" src="https://climateismoney.files.wordpress.com/2021/07/weekender.png" alt="The Weekender: $250/month" onclick="decide('#funSelect', 'The Weekender', 250, false, '#fun');">
+                <img id="spender" class="center" src="https://climateismoney.files.wordpress.com/2021/07/bigspender.png" alt="The Big Spender: $400/month" onclick="decide('#funSelect', 'The Big Spender', 400, false, '#fun');">
+                
+                <div id="fun-footer" class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="fun-audio" src="audio/fun-audio.m4a"></audio>
+                            <button id="fun-audio-play" class="button-so audio-button" onclick="controlAudio('fun-audio', 'fun-audio-play', 'fun-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="fun-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('fun-audio', 'fun-audio-pause', 'fun-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">    
+                        <h3>Believe it or not, having fun can cost money! With the Stay at Home option, you will be doing things such as gaming, or arts and crafts at home. In The Weekender, you would go to movies or see a cool show! As the Big Spender, you would go to big concerts, parties, and events. Which will you be? Click on the option that seems best to you!</h3>
+                    </div>
+                </div>
+            </div>    
+        </div>
+            
+        <div class="modal" id="commSelect">
+            <div id="comm-content" class="modal-content">
+                <div id="comm-header" class="modal-header">
+                    <h1>You Have to Keep in Touch! Pick as Many as You Want!</h1>
+                </div>
+                <form id="comm-form">
+                    
+                        <div id="phone-wrapper">
+                            <input class="commBox" value="80" type="checkbox" id="phone">
+                                <img class="center" for="phone" src="https://climateismoney.files.wordpress.com/2021/07/phone.png" alt="Phone: $80/month">
+                        </div>
+                        <div id="internet-wrapper">
+                            <input class="commBox" value="70" type="checkbox" id="internet">
+                                <img class="center" for="internet" src="https://climateismoney.files.wordpress.com/2021/07/internet.png" alt="High Speed Internet: $70/month">
+                        </div>
+               
+                        <div id="nettv-wrapper">
+                            <input class="commBox" value="50" type="checkbox" id="nettv">
+                                <img class="center" for="nettv" src="https://climateismoney.files.wordpress.com/2021/07/internettv.png" alt="Internet TV: $50/month">
+                        </div>
+                        <div id="premium-wrapper">
+                            <input class="commBox" value="130" type="checkbox" id="premium">
+                                <img class="center" for="premium" src="https://climateismoney.files.wordpress.com/2021/07/premiumtv.png" alt="Premium TV: $130/month">
+                        </div>
+                  
+                    <button type="button" class="button-so" id="commsubmit" onclick="communication('#communicationId');">Submit</button>
+                </form>
+                
+                <div id="comm-footer" class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="keep-in-touch-audio" src="audio/keep-in-touch-audio.m4a"></audio>
+                            <button id="keep-in-touch-audio-play" class="button-so audio-button" onclick="controlAudio('keep-in-touch-audio', 'keep-in-touch-audio-play', 'keep-in-touch-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="keep-in-touch-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('keep-in-touch-audio', 'keep-in-touch-audio-pause', 'keep-in-touch-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>How will you keep in touch? Having a phone is quite necessary for modern life and without it, you won’t be able to quickly talk with friends! High speed internet is important if you have a job which requires remote working. Internet TV has many channels but might not have all your favorite shows. Finally, Premium TV is the most expensive and will have almost everything you want to watch. When making a decision on this, keep in mind the requirements of your job and what you will personally need to function. You can choose as many as you like.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal" id="saveSelect">
+            <div id="save-content" class="modal-content">
+                <div id="save-header" class="modal-header">
+                    <h1>Don't Forget to Pay Yourself!</h1>
+                </div>
+                
+                <img id="simple" class="center" src="https://climateismoney.files.wordpress.com/2021/07/simplesaver.png" alt="Simple Saver: 5%/month" aria-activedescendant=""onclick="decide('#saveSelect', 'Simple Saver', (0.05*data[0][2]), false, '#save');">
+                <img id="savvy" class="center" src="https://climateismoney.files.wordpress.com/2021/07/savvysaver.png" alt="Savvy Saver: 10%/month" onclick="decide('#saveSelect', 'Savvy Saver', (0.1*data[0][2]), false, '#save');">
+                <img id="super" class="center" src="https://climateismoney.files.wordpress.com/2021/07/supersaver.png" alt="Super Saver: 20%/month" onclick="decide('#saveSelect', 'Super Saver', (0.2*data[0][2]), false, '#save')">
+                
+                <div id="save-footer" class="modal-footer">
+                    <div class="modal-footer-left">
+                        <div class="modal-footer-left-inner">
+                            <audio id="saving-audio" src="audio/saving-audio.m4a"></audio>
+                            <button id="saving-audio-play" class="button-so audio-button" onclick="controlAudio('saving-audio', 'saving-audio-play', 'saving-audio-pause', 'play');"><span class="material-symbols-outlined">play_circle</span></button> 
+                            <button id="saving-audio-pause" class="pauseButtonHidden button-so audio-button" onclick="controlAudio('saving-audio', 'saving-audio-pause', 'saving-audio-play', 'pause');"><span class="material-symbols-outlined">pause_circle</span></button>
+                        </div>
+                    </div>
+                    <div class="modal-footer-right">
+                        <h3>As you saw with the unexpected event, life is full of surprises. This makes saving very important. For example, if you lose your job, you will need to rely on saved money so you can maintain a good standard of living. Remember, you will get this money back at the end of the game.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+        
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    console.log('Images and content adapted from the Federal Reserve Bank of Richmonds "Dollars and Sense" publication. Coded and developed by Anmol Mital, MLWGS Class of 2023. Educational Purposes Only. Copyright Climate and Money 2021.')    
+    
+        var wheelTile;
+        var data = [];
+        function popup(box, category) {
+            document.querySelectorAll('audio').forEach(e => {
+                e.currentTime = 0;
+                e.pause();
+            } );
+            if($(box).attr("highlight")==="yes") {
+                $(category).dialog({
+                    modal: true,
+                    width: 1000, 
+                    position: {my: "center", at: "center", collision: "flip"},
+                });
+            } else {
+                alert("Please click on the highlighted box instead!")
+            };
+        };
+        
+        function highlight(box) {
+           document.querySelectorAll('audio').forEach(e => {
+            e.currentTime = 0;
+            e.pause();
+           }); 
+           
+           $(box).attr("highlight", "no");
+            
+            var locationId = Number($(box).attr("location-id"));
+            var nextId = locationId + 1;
+            
+            if(nextId===17) {
+                endGame();
+            }
+            else {
+                $(box).addClass("hiddenSquare");
+                var boxId = document.querySelectorAll('[location-id="'+nextId+'"]');
+                console.log(boxId);
+                $(boxId).attr("highlight", "yes");
+                wheelTile = null; 
+            }
+            
+        }
+
+        /*  Saving reference of the tile that called Wheel of Fortune.
+            Will be using this reference later to call highlight when we are about to close the modal using closeWheel() function */
+        function setWheelTile(box) {
+            wheelTile = box;
+        }
+        
+        function decide (category, choice, price, earn, box) {
+            if(earn) {
+                text = "earn";
+                sign = "+";
+            } else {
+                text = "cost";
+                sign = "-";
+            };
+            var result = confirm("Are you sure you want to choose " + choice + "? This will " + text + " $" + price + ".")
+            if(result == true) {
+                data.push([category, choice, price, earn]);
+                var cellText = sign + price; 
+                var cellId = category + "-cell";
+                $(cellId).text(cellText);
+                $(category).dialog("close");
+                highlight(box);
+            };
+        };
+        
+        function invest(box) {
+            var investAmount = document.getElementById("investAmount").value;
+            investAmount = investAmount == '' ? 0 : Number(investAmount);
+            var realAmount = Number(investAmount);
+            console.log(typeof realAmount);
+            
+            if(realAmount>1500) {
+                alert("Please choose a value less than $1,500.")
+            } else {
+                data.push(['#invest', investAmount, realAmount, false]);
+                const button = document.getElementById('submitAmount')
+                button.disabled = true;
+                $("#invest1-cell").text("-" + investAmount);
+
+                var nextAmount = 1500 - realAmount; 
+                var paraText = "You have already invested $" + realAmount + " so you can only invest $" + nextAmount + " more.";
+                $("#previous-amount").text(paraText);
+                var possibleStringAmount = "'" + nextAmount + "'";
+                $("#investAmount2").attr("max", possibleStringAmount);
+                $("#invest").dialog("close");
+                highlight(box);
+            }
+        };
+        
+        function investTwo(box) {
+            var previousAmount = data[4][2];
+            var possibleAmount = 1500 - previousAmount;
+            var amountInvested = document.getElementById("investAmount2").value;
+            amountInvested = amountInvested == '' ? 0 : Number(amountInvested);
+            
+            var numberAmount = Number(amountInvested);
+            if(numberAmount > possibleAmount) {
+                alert("Last time you invested $" + previousAmount + ". Please invest less than $" + possibleAmount + ".")
+            } else {
+                data.push(['#invest2', amountInvested, numberAmount, false]);
+                $("#invest2-cell").text("-" + numberAmount)
+                const lastButton = document.getElementById('submitInvest')
+                lastButton.disabled = true;
+                $("#invest2").dialog("close");
+                highlight(box);
+            }
+        };
+
+        function communication(box) {
+            var val = [];
+            $(':checkbox:checked').each(function(i){
+                val[i] = Number($(this).val());
+            });
+            var sum = 0;
+            for (var a = 0; a < val.length; a++) {
+                sum += val[a];
+                $("#commSelect-cell").text("-" + sum);
+                data.push(["#commSelect", "mc", sum, false]);
+                $("#commSelect").dialog("close");
+                highlight(box);
+            }
+        };
+        
+        function endGame() {
+            var investInterest1 = Math.round(100*(1.2 * Number(Math.abs($("#invest1-cell").text()))))/100;
+                $("#invest1Cell").text("+" + investInterest1);
+            var investInterest2 = Math.round(100*(1.2 * Number(Math.abs($("#invest2-cell").text()))))/100;
+                $("#invest2Cell").text("+" + investInterest2);
+            var saveInterest = Number(Math.abs($("#saveSelect-cell").text()));;
+                $("#saveSelectCell").text("+" + saveInterest);
+            var newCenterText = " Thanks for playing! Please fill out our <a href='https://docs.google.com/forms/d/e/1FAIpQLSf5Lj41OwhodWVeYB6e0hxRSgYAHjNR7Gf-ovGwAEb3LUYAOA/viewform?usp=sf_link' target='_blank'>Feedback Form</a> so we can continue to improve the game."
+            console.log("end");
+            
+            var earnSum = 0;
+            $(".earncell").each(function() {
+                earnSum += Number($(this).text());
+                $("#incomeTotal").text("+$" + earnSum);
+            });;
+            
+            var expenseSum = 0;
+            var posVar = 0;
+            $(".expensecell").each(function() {
+                expenseSum += Number($(this).text());
+                posVar = Math.round(100*(Math.abs(expenseSum)))/100;
+                $("#expenseTotal").text("-$" + posVar)
+            });;
+            var totalText;
+            var aText;
+            var totalValue = earnSum + expenseSum;
+            if (posVar < earnSum) {
+                totalText = "+$";
+                aText = " You earned more than you spent! You are on track to a well-balanced budget!"
+                document.getElementById("main-page-audio-small").src = "audio/ending-earned-more-than-spent-audio.m4a";
+                document.getElementById("main-page-audio").src = "audio/ending-earned-more-than-spent-audio.m4a";
+            } else if(posVar > earnSum) {
+                totalText = "-$";
+                aText = " You spent more than you earned. Next time, you may want to spend less to avoid debt."
+                document.getElementById("main-page-audio-small").src = "audio/ending-spent-more-than-earned.m4a";
+                document.getElementById("main-page-audio").src = "audio/ending-spent-more-than-earned.m4a";
+            }
+            $("#totalCell").text(totalText + totalValue);
+            $(".game-desc-text").html(aText + newCenterText);
+            //$("#formLink").attr("href", "https://docs.google.com/forms/d/e/1FAIpQLSf5Lj41OwhodWVeYB6e0hxRSgYAHjNR7Gf-ovGwAEb3LUYAOA/viewform?usp=sf_link");
+            //$("#formLink").text("Feedback Form");
+        }
+        
+        function unexpectedEvent(box, category) {
+            var divname = "#unexpectedSelect1"; 
+            if($(box).attr("highlight")==="yes") {
+                $(divname).dialog({
+                    width: 1000, 
+                    position: {my: "center", at: "center", collision: "flip"},
+                });
+            } else {
+                alert("Please click on the highlighted box instead!")
+            };
+            
+            var randomValue = Math.floor(Math.random()*10);
+            // var heads = document.getElementById("heads");
+            // var tails = document.getElementById("tails");
+            $("#heads").unbind("click");
+            $("#tails").unbind("click");
+            if (randomValue < 2) {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin: if heads, a hurricane hits and you have to pay $1300 to repair your roof. If tails, your mother deposits $200 per month in your bank account.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 1300, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-1300");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 200, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+200");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 4) {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin: if heads, you messed up your taxes and owe $1200. If tails, you won a contest and receive $600.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 1200, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-1200");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 600, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+600");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 6) {
+                $("#unexpectedText").text("You invested in a car company. Flip a coin: if heads, you earned $1000. If tails, you lost $500.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 1000, true]); 
+                        var cellId = category + "Cell";
+                        $(cellId).text("+1000");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 500, false])
+                        var cellId = category + "-cell";
+                        $(cellId).text("-500");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 7) {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin: if heads, you forgot to pay your water bill and owe $300. If tails, you sold an old TV and gained $400.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 300, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-300");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    })
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 400, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+400");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 8) {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin. If heads, your bank account was robbed and you lost $2000. If tails, the state government gave you $1500 for installing solar panels on your roof.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 2000, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-2000");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 1500, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+1500");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else if(randomValue < 9) {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin: if heads, you dropped your phone in a pond and you must pay $500 to repair it. If tails, you start a part time photography business and get $2000 from a wedding.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 500, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-500");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 2000, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+2000");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            } else {
+                $("#unexpectedText").text("Life brings unexpected events. Flip a coin: if heads, you misplaced $300. If tails, your grandmother gave $60.");
+                    $("#heads").click(function(){
+                        data.push([category, 'heads', 300, false]); 
+                        var cellId = category + "-cell";
+                        $(cellId).text("-300");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+                    $("#tails").click(function() {
+                        data.push([category, 'tails', 60, true])
+                        var cellId = category + "Cell";
+                        $(cellId).text("+60");
+                        $(divname).dialog("close");
+                        highlight(box);
+                    });
+            };
+        };
+    //Wheel of fortune
+        const sectors = [
+          {color:"#f82", label:"Pay $20"},
+          {color:"#0bf", label:"Pay $20"},
+          {color:"#fb0", label:"Pay $20"},
+          {color:"#0fb", label:"Pay $20"},
+          {color:"#b0f", label:"Pay $20"},
+          {color:"#f0b", label:"$1500"},
+          {color:"#bf0", label:"Pay $20"},
+        ];
+        const rand = (m, M) => Math.random() * (M - m) + m;
+        const tot = sectors.length;
+        const EL_spin = document.querySelector("#spin");
+        const ctx = document.querySelector("#wheel").getContext('2d');
+        const dia = ctx.canvas.width;
+        const rad = dia / 2;
+        const PI = Math.PI;
+        const TAU = 2 * PI;
+        const arc = TAU / sectors.length;
+
+        const friction = 0.991; // 0.995=soft, 0.99=mid, 0.98=hard
+        let angVel = 0; // Angular velocity
+        let ang = 0; // Angle in radians
+
+        const getIndex = () => Math.floor(tot - ang / TAU * tot) % tot;
+
+        function drawSector(sector, i) {
+          const ang = arc * i;
+          ctx.save();
+          // COLOR
+          ctx.beginPath();
+          ctx.fillStyle = sector.color;
+          ctx.moveTo(rad, rad);
+          ctx.arc(rad, rad, rad, ang, ang + arc);
+          ctx.lineTo(rad, rad);
+          ctx.fill();
+          // TEXT
+          ctx.translate(rad, rad);
+          ctx.rotate(ang + arc / 2);
+          ctx.textAlign = "right";
+          ctx.fillStyle = "#fff";
+          ctx.font = "bold 20px sans-serif";
+          ctx.fillText(sector.label, rad - 10, 10);
+          //
+          ctx.restore();
+        };
+
+        function rotate() {
+          const sector = sectors[getIndex()];
+          ctx.canvas.style.transform = `rotate(${ang - PI / 2}rad)`;
+          EL_spin.textContent = !angVel ? "SPIN" : sector.label;
+          EL_spin.style.background = sector.color;
+        }
+        function closeWheel() {
+            highlight(wheelTile);
+            $("#wheelOfFortune").dialog("close");
+        }
+        var wheelNumber = 0;
+        function frame() {
+          if (!angVel) return;
+          angVel *= friction; // Decrement velocity by friction
+          if (angVel < 0.002) {
+              var wheelValue = determineValue(ang);
+              wheelNumber = wheelNumber + 1;
+              
+              if(wheelValue == 1500) {
+                  var accept = confirm("Congratulations! You won $1500!");
+                  if(accept===true) {
+                      closeWheel();
+                  } else if (accept===false) {
+                      closeWheel();
+                  }
+                  data.push(['wheel', 'won', wheelValue, true]);
+                  var cellId = "#wheelOfFortune" + wheelNumber.toString() + "PLUScell";
+                  $(cellId).text("+1500");
+              } else {
+                  var accept = confirm("Sorry, you lost $20.");
+                  if(accept===true) {
+                      closeWheel();
+                  } else if (accept===false) {
+                      closeWheel();
+                  }
+                  data.push(['wheel', 'lost', wheelValue, false]);
+                  var cellId = "#wheelOfFortune" + wheelNumber.toString() + "-cell";
+                  $(cellId).text("-20");
+              }
+              angVel = 0;
+        // Bring to stop
+          }
+          ang += angVel; // Update angle
+          ang %= TAU; // Normalize angle
+          rotate();
+        }
+
+        function engine() {
+          frame();
+          requestAnimationFrame(engine)
+        }
+
+        // INIT
+        sectors.forEach(drawSector);
+        rotate();
+        engine();
+        EL_spin.addEventListener("click", () => {
+          if (!angVel) angVel = rand(0.25, 0.35);
+        });
+        
+        function determineValue(ang) {
+            if(ang > 0 && ang <= 0.897) {
+                return 20;
+            }
+
+            if(ang > 0.897 && ang <= 1.794) {
+                return 1500;
+            }
+            if(ang > 1.794 && ang<=2.691) {
+                return 20;
+            }
+            if(ang > 2.691 && ang <=3.589) {
+                return 20;
+            }
+            if(ang > 3.589 && ang<=4.486) {
+                return 20;
+            }
+            if(ang > 4.486 && ang<=5.383) {
+                return 20;
+            }
+
+            if(ang>5.383) {
+                return 20;
+            }
+        }
+
+        function controlAudio(playerID, hide, show, state) {
+            document.getElementById(hide).style.display = "none";
+            document.getElementById(show).style.display = "inline";
+            if(state === 'play') {
+                document.getElementById(playerID).play();
+            }
+            else {
+                document.getElementById(playerID).pause();
+            }
+        }
+
+        $(document).ready(function(){
+            $('#wheelOfFortune').hide();
+        });
+    </script>
+
+</body>
+</html>
